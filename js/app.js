@@ -1,11 +1,11 @@
 //服务器端
 var app = require('http').createServer();
 var io = require('socket.io')(app);
-var PORT = 8081;
+var PORT = 2311;
 /*定义用户数组*/
 var users = [];
 
-app.listen(PORT);//监听8081端口
+app.listen(PORT);//监听2311端口
 
 io.on('connection', function (socket) {
 	/*是否是新用户标识*/
@@ -54,4 +54,4 @@ io.on('connection', function (socket) {
     })
 })
 
-console.log('app listen at'+PORT);
+console.log('正在监听'+PORT+"端口");
